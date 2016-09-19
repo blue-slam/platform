@@ -6,4 +6,5 @@
 	  <include file="$(find imu)/launch/imu.launch"/>
 	  <include file="$(find leddar)/launch/leddar.launch"/>
  	  <include file="$(find raspicam)/launch/raspicam.launch"/>
+	  <include file="$(find range)/launch/leddar.launch"/>
 </launch>
