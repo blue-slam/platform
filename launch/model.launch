@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+    <param name="robot_description" command="cat $(find platform)/urdf/blue-slam.urdf" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="blue_slam_state" respawn="true" output="screen"/>
+</launch>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-15"?>
-
-<launch>
-	  <include file="$(find lowlevel)/launch/lowlevel.launch"/>
-	  <include file="$(find motors)/launch/motors.launch"/>
-	  <include file="$(find imu)/launch/imu.launch"/>
-	  <include file="$(find leddar)/launch/leddar.launch"/>
- 	  <include file="$(find raspicam)/launch/raspicam.launch"/>
-</launch>
