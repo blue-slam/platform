@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<launch>
+    <machine name="controller" address="blue-slam-controller.streetfamily.com" env-loader="~/Workspace/$ROBOT/src/platform/scripts/env.sh"/>
+    <machine name="brain" address="blue-slam-brain.streetfamily.com" env-loader="~/Workspace/$ROBOT/src/platform/scripts/env.sh"/>
+    <machine name="host" address="localhost" env-loader="~/Workspace/$ROBOT/src/platform/scripts/env.sh"/>
+</launch>

@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="ISO-8859-15"?>
 
 <launch>
-    <include file="$(find lowlevel)/launch/control.launch"/>
-    <include file="$(find motors)/launch/drive.launch"/>
-    <include file="$(find imu)/launch/imu.launch"/>
-    <include file="$(find leddar)/launch/leddar.launch"/>
-    <include file="$(find raspicam)/launch/raspicam.launch"/>
-    <include file="$(find platform)/launch/model.launch"/>
+    <include file="$(find platform)/launch/includes/machines.launch.xml"/>
+
+    <include file="$(find lowlevel)/launch/model.launch">
+        <arg name="machine" default="brain"/>
+    </include>
+
+    <include file="$(find lowlevel)/launch/control.launch">
+        <arg name="machine" default="controller"/>
+    </include>
+
+    <include file="$(find drive)/launch/drive.launch">
+        <arg name="machine" default="controller"/>
+    </include>
+
+    <include file="$(find imu)/launch/imu.launch">
+        <arg name="machine" default="controller"/>
+    </include>
+
+    <include file="$(find leddar)/launch/leddar.launch">
+        <arg name="machine" default="controller"/>
+    </include>
+
+    <include file="$(find odometry)/launch/blueslam_ekf.launch">
+        <arg name="machine" default="controller"/>
+    </include>
+
+    <include file="$(find vision)/launch/vision.launch">
+        <arg name="machine" default="brain"/>
+    </include>
+
+    <include file="$(find navigation)/launch/navigation.launch">
+        <arg name="machine" default="brain"/>
+    </include>
+
+    <include file="$(find mission)/launch/explore.launch">
+        <arg name="machine" value="brain"/>
+    </include>
+
 </launch>

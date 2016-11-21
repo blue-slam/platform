@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<launch>
+    <include file="$(find mission)/launch/explore-interface.launch"/>
+
+    <node pkg="rviz" type="rviz" name="blueslam_rviz" args="-d $(find platform)/blue-slam.rviz" respawn="false" output="screen">
+        <remap from="odom" to="odometry/filtered"/>
+    </node>
+</launch>
